@@ -1,4 +1,5 @@
+
 fastapi
-uvicorn
-openai
+uvicorn[standard]
 pydantic
+requests

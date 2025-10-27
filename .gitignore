@@ -1,80 +1,47 @@
-# === General ===
+# OS
 .DS_Store
-*.log
-*.tmp
-*.swp
-*.bak
-*.class
-*.iml
-.idea/
-.vscode/
-.env
-.env.*
-__pycache__/
-*.py[cod]
-*.pyo
+Thumbs.db
 
-# === Node / React (frontend) ===
+# Node
 node_modules/
 dist/
-.cache/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-coverage/
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.npm/
+.env
 
-# === Java / Spring Boot (backend-java) ===
-target/
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# Java
+/target/
+*.log
+*.class
 *.jar
 *.war
-*.ear
-*.class
-*.project
-*.classpath
-*.settings/
-.mvn/
-spring.log
-build/
-out/
+*.iml
 
-# === Python / FastAPI or Flask (backend-python) ===
-venv/
-.venv/
-env/
-ENV/
-*.egg-info/
-*.egg
-pip-log.txt
-instance/
-htmlcov/
-.pytest_cache/
-.mypy_cache/
-__pycache__/
-*.sqlite3
-*.db
+# IDEs
+.idea/
+.vscode/
+*.swp
 
-# === Docker / Deployment ===
+# Docker
 *.pid
 *.seed
-*.pid.lock
-docker-compose.override.yml
-.env.docker
-.envrc
+logs/
+pgdata/
 
-# === Cloud / Secrets ===
-credentials.json
-gcp-key.json
-*.pem
-*.key
-*.crt
+# Build
+/build/
+/tmp/
 
-# === OS / IDE ===
-Thumbs.db
-ehthumbs.db
-desktop.ini
-*.orig
-*.rej
+# Coverage / testing
+coverage/
+*.lcov
+
+# Misc
+*.zip
+*.bak
