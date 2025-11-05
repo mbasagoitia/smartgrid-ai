@@ -1,0 +1,79 @@
+.instructions {
+    margin: 0.75rem 0;
+    font-family: inherit;
+    color: white;
+    width: 100%;
+}
+  
+.instructions-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 0.5rem 0rem;
+    margin: 0 0 0.5rem 0;
+    cursor: pointer;
+    text-align: left;
+    gap: 0.5rem;
+    border-radius: 6px;
+    transition: background 120ms ease;
+}
+
+.instructions-toggle:hover {
+    background: rgba(15, 23, 42, 0.03);
+}
+.instructions-toggle:focus {
+    outline: 2px solid rgba(59,130,246,0.25);
+    outline-offset: 2px;
+}
+
+.instructions-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: white;
+}
+
+.expand-collapse-text {
+    font-weight: 200;
+}
+
+.chevron {
+    transition: transform 200ms ease;
+    color: white;
+    flex: 0 0 18px;
+}
+.chevron-open {
+    transform: rotate(90deg);
+}
+
+.instructions-content {
+    overflow: hidden;
+    transition: max-height 300ms cubic-bezier(.2,.9,.2,1);
+}
+
+.instructions-body {
+    box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+}
+
+.instructions-subtle {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.instructions-list {
+    margin: 0;
+    padding-left: 1.25rem;
+    list-style: disc;
+    font-size: 0.9rem;
+    line-height: 1.45;
+}
+
+@media (max-width: 420px) {
+    .instructions-body {
+        padding: 0.6rem 0.4rem;
+    }
+    .instructions-title { font-size: 0.92rem; }
+    .instructions-list { font-size: 0.88rem; }
+}

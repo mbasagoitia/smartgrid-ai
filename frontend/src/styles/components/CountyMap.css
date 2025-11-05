@@ -1,0 +1,45 @@
+.county-map-container {
+    width: 100%;
+    height: 600px;
+    position: relative;
+  }
+  
+.county-map {
+    width: 100%;
+    height: 100%;
+    }
+
+.marker {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.marker-Solar {
+    background: yellow;
+}
+
+.marker-Wind {
+    background: lightblue;
+}
+
+.marker-Hydro {
+    background: darkblue;
+    color: white;
+}
+
+.marker-Nuclear {
+    background: lightgreen;
+}
+
+.marker-Default {
+    background: gray;
+    color: white;
+}
+  

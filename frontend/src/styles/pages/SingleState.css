@@ -1,0 +1,40 @@
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: #f7f9fc;
+    overflow: hidden;
+    font-family: system-ui, sans-serif;
+}
+
+.map-area {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: margin-left 0.3s ease;
+}
+
+.map-area .county-map-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.mapboxgl-map {
+    min-height: 100vh !important;
+    margin: 0 !important;
+}
+
+@media (min-width: 1024px) {
+.dashboard-container {
+    background: linear-gradient(135deg, #f7f9fc 60%, #eaf0f6 100%);
+    }
+
+.map-area {
+    box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.05);
+    }
+}

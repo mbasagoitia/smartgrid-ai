@@ -1,0 +1,49 @@
+.manage-generators {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: #f9fafb;
+  }
+  
+  .manage-generators .buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+  
+  .undo-btn,
+  .reset-btn {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .undo-btn {
+    background: #e0f2fe;
+    color: #0369a1;
+  }
+  
+  .undo-btn:hover {
+    background: #bae6fd;
+  }
+  
+  .undo-btn:disabled {
+    background: #f3f4f6;
+    color: #9ca3af;
+    cursor: not-allowed;
+  }
+  
+  .reset-btn {
+    background: #fee2e2;
+    color: #b91c1c;
+  }
+  
+  .reset-btn:hover {
+    background: #fecaca;
+  }
+  
