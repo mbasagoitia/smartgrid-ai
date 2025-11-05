@@ -20,11 +20,11 @@ Users can:
 ## Data & APIs
 The simulation integrates several real-world datasets and APIs to keep results realistic:
 
-**US Census + TIGERweb API:** County boundaries and region data
-**NREL PVWatts API:** Solar potential (irradiance, average output)
-**NREL Wind Toolkit API:** Wind resource potential
-**USGS Water Data API:** Hydroelectric potential indicators
-**EIA (Energy Information Administration):** State-level energy demand & consumption data
+- **US Census + TIGERweb API:** County boundaries and region data
+- **NREL PVWatts API:** Solar potential (irradiance, average output)
+- **NREL Wind Toolkit API:** Wind resource potential
+- **USGS Water Data API:** Hydroelectric potential indicators
+- **EIA (Energy Information Administration):** State-level energy demand & consumption data
 
 All datasets are wrapped in a WeatherDataFacade class, providing a single interface for retrieving relevant metrics per county.
 This structure hides the complexity of dealing with multiple APIs and formats.
