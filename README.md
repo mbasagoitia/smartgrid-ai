@@ -1,10 +1,5 @@
 # SmartGrid-AI
 
-docker-compose up --build
-
-Database access: 
-psql -h localhost -p 5432 -U smartgrid_user -d smartgrid
-
 # AI-Powered Clean Energy Grid Simulator
 
 An interactive, AI-assisted energy planning simulator where users place and manage clean energy generators (solar, wind, hydro, nuclear) to power U.S. states over a simulated year.
@@ -25,11 +20,12 @@ Users can:
 ## Data & APIs
 The simulation integrates several real-world datasets and APIs to keep results realistic:
 
-US Census + TIGERweb API: County boundaries and region data
-NREL PVWatts API: Solar potential (irradiance, average output)
-NREL Wind Toolkit API: Wind resource potential
-USGS Water Data API: Hydroelectric potential indicators
-EIA (Energy Information Administration): State-level energy demand & consumption data
+**US Census + TIGERweb API:** County boundaries and region data
+**NREL PVWatts API:** Solar potential (irradiance, average output)
+**NREL Wind Toolkit API:** Wind resource potential
+**USGS Water Data API:** Hydroelectric potential indicators
+**EIA (Energy Information Administration):** State-level energy demand & consumption data
+
 All datasets are wrapped in a WeatherDataFacade class, providing a single interface for retrieving relevant metrics per county.
 This structure hides the complexity of dealing with multiple APIs and formats.
 
@@ -37,13 +33,13 @@ This structure hides the complexity of dealing with multiple APIs and formats.
 
 ### Frontend: React + Mapbox
 
-Displays interactive map of chosen state with selectable counties.
+Displays interactive map of chosen state with county boundaries.
 
-Users place generators visually.
+Users place generators visually based on weather data.
 
-Shows live updates of output, demand, and storage levels.
+Shows live updates of output, demand, transmission loss, and storage levels.
 
-### Backend: Java (Spring Boot or Micronaut)
+### Backend: Java (Spring Boot)
 
 Core simulation logic and object model.
 
@@ -123,13 +119,13 @@ PredictiveStorageStrategy: Uses AI forecasts to decide when to store or release 
 
 1. User selects a state and frontend fetches counties via TIGERweb API.
 
-2. User places generators/plants on the map using available budget.
+2. WeatherDataFacade retrieves and displays per-county weather and potential data.
 
-3. User selects a battery storage strategy before running the simulation (conservative, aggressive, predictive). The simulation then applies it to all counties, which affects stability and outage probability.
+3. User places generators/plants on the map by county using available budget. Option to delete and replace generators.
 
-4. User runs simulation
+4. User selects a battery storage strategy before running the simulation (conservative, aggressive, predictive). The simulation then applies it to all counties, which affects stability and outage probability.
 
-5. WeatherDataFacade retrieves per-county weather and potential data.
+5. User runs simulation
 
 6. AI service predicts monthly generation for each region.
 
@@ -151,7 +147,7 @@ PredictiveStorageStrategy: Uses AI forecasts to decide when to store or release 
 
 ## Future Extensions
 
-Extend the simulation to other states/regions
+Extend the simulation to other regions
 
 Add inter-state power trading (regional grid sharing).
 
