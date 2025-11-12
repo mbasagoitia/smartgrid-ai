@@ -1,6 +1,7 @@
 package com.smartgrid.model;
 
+import java.util.List;
+
 public interface BatteryStrategy {
-    // Manages energy flow for a given simulation step; determined by user
-    void manageStorage(EnergyStorage hub, double currentOutput, double currentDemand);
+    void manageStorage(List<BatteryHub> hubs, double currentOutput, double currentDemand, String countyGeoid);
 }
