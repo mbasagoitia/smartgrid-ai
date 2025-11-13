@@ -127,7 +127,7 @@ public class CountyProfileService {
             if ("Polygon".equals(type)) return averageCoords(geometry.path("coordinates").get(0));
             else if ("MultiPolygon".equals(type)) return averageCoords(geometry.path("coordinates").get(0).get(0));
         } catch (Exception ignored) {}
-        // Eventually add a different fallback
+        // Eventually add a different fallback, this is the Colorado centroid
         return new double[]{-105.0, 39.0};
     }
 
